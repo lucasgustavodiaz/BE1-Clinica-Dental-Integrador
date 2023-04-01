@@ -1,3 +1,4 @@
+[![Github Status][github-shield]][github-url]
 [![Build Status][build-shield]][build-url]
 [![Codacy Status][codacy-shield]][codacy-url]
 
@@ -163,7 +164,9 @@ java -jar ClinicaOdontologica.jar
 
 - Obtener todos: `GET` a `PATH/turnos`
 
-[build-shield]: https://img.shields.io/badge/build-passing-brightgreen
-[build-url]: https://travis-ci.com/
-[codacy-shield]: https://img.shields.io/badge/code%20quality-A-brightgreen
-[codacy-url]: https://www.codacy.com/
+[github-shield]: https://img.shields.io/badge/GitHub-lucasgustavodiaz-blue?logo=github&style=flat
+[github-url]: https://github.com/lucasgustavodiaz/BE1-Clinica-Dental-Integrador
+[build-shield]: https://app.travis-ci.com/lucasgustavodiaz/BE1-Clinica-Dental-Integrador.svg?branch=main&status=passed
+[build-url]: https://app.travis-ci.com/github/lucasgustavodiaz/BE1-Clinica-Dental-Integrador
+[codacy-shield]: https://app.codacy.com/project/badge/Grade/a9e0e2a01d934f1b8a2f2f46320d4539
+[codacy-url]: https://app.codacy.com/gh/lucasgustavodiaz/BE1-Clinica-Dental-Integrador/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
