@@ -1,0 +1,10 @@
+language: java
+sudo: true
+jdk: oraclejdk19
+before_install:
+  - chmod +x mvnw
+notifications:
+  email:
+    recipients:
+      - lucasgustavodiaz@hotmail.com
+    on_failure: always
