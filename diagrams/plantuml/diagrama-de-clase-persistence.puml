@@ -1,0 +1,41 @@
+@startuml
+allowmixing
+
+component Application {
+    package clinica #8c5bf5{
+
+        package persistence {
+            package repository {
+                interface "IRepository<T>"{
+                    + guardar(T t) : T
+                    + buscarTodos() : List<T>
+                    + buscar(Integer id) : T
+                    + actualizar(T t) : T
+                    + eliminar(Integer id) : void
+                }
+
+                package impl {
+                    interface "IOdontologoRepository<Odontologo>" {
+                        + buscar(String nombre) : Optional<List<Odontologo>>
+                    }
+                    interface "IPacienteRepositoryH<Paciente>" {
+                    }
+
+                    interface "ITurnoRepository<Turno>" {
+                    }
+                }
+            }
+
+            package entities {
+                class Paciente
+                class Odontologo
+                class Domicilio
+                class Turno
+            }
+        }
+
+        repository ..> entities
+    }
+
+}
+@enduml

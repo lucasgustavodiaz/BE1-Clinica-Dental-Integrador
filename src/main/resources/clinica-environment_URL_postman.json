@@ -1,0 +1,14 @@
+{
+    "name": "URL",
+    "id": "0d26dd2d-e288-4817-8068-da920fbb3f1a",
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2023-04-01T15:05:26.096Z",
+    "_postman_exported_using": "Thunder Client",
+    "values": [
+        {
+            "key": "URL",
+            "value": "http://localhost:8080",
+            "enabled": true
+        }
+    ]
+}

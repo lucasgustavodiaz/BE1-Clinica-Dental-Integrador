@@ -1,0 +1,354 @@
+{
+    "info": {
+        "name": "Clinica Odontologica",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Paciente",
+            "item": [
+                {
+                    "name": "Registrar Paciente",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL}}/pacientes",
+                            "path": [
+                                "pacientes"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"nombre\": \"Lucas\",\n  \"apellido\": \"Diaz\",\n  \"cedula\": \"789\",\n  \"fechaDeIngreso\": \"2023-03-15\",\n  \"domicilio\": {\n    \"calle\": \"Teodoro Fels\",\n    \"numero\": 785,\n    \"localidad\": \"Santa Rosa\",\n    \"provincia\": \"La Pampa\"\n  }\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar Paciente",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{URL}}/pacientes/2",
+                            "path": [
+                                "pacientes",
+                                "2"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar Paciente",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "{{URL}}/pacientes",
+                            "path": [
+                                "pacientes"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"id\": 1,\n    \"nombre\": \"DIEGO Armando\",\n    \"apellido\": \"MARADONA  \",\n    \"cedula\": \"123\",\n    \"fechaDeIngreso\": \"2023-03-07\",\n    \"domicilio\": {\n      \"id\": 1,\n      \"calle\": \"SAN MARTIN\",\n      \"numero\": 859,\n      \"localidad\": \"CABA\",\n      \"provincia\": \"BS AS\"\n    }\n  }"
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar Paciente",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/pacientes/1",
+                            "path": [
+                                "pacientes",
+                                "1"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar todos los pacientes",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/pacientes",
+                            "path": [
+                                "pacientes"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Odontologo",
+            "item": [
+                {
+                    "name": "Registrar Odontologo",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL}}/odontologos",
+                            "path": [
+                                "odontologos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"numeroMatricula\": \"009\",\n  \"nombre\": \"LUK\",\n  \"apellido\": \"MAN\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar Odontologo",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{URL}}/odontologos/1",
+                            "path": [
+                                "odontologos",
+                                "1"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar Odontologo",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "{{URL}}/odontologos",
+                            "path": [
+                                "odontologos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": 1,\n  \"numeroMatricula\": \"008\",\n  \"nombre\": \"Lucas\",\n  \"apellido\": \"Diaz\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar Odontologo",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/odontologos/1",
+                            "path": [
+                                "odontologos",
+                                "1"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar todos los odontologos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/odontologos",
+                            "path": [
+                                "odontologos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "admin",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "admin",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Turno",
+            "item": [
+                {
+                    "name": "Registrar Turno",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL}}/turnos",
+                            "path": [
+                                "turnos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"fecha\": \"2023-03-15T16:00\",\n  \"paciente\": {\n    \"id\": 2,\n    \"nombre\": \"LEO\",\n    \"apellido\": \"MESSI\",\n    \"cedula\": \"456\",\n    \"fechaDeIngreso\": \"2023-03-07\",\n    \"domicilio\": {\n      \"id\": 2,\n      \"calle\": \"MITRE\",\n      \"numero\": 3015,\n      \"localidad\": \"RIO CUARTO\",\n      \"provincia\": \"CORDOBA\"\n    }\n  },\n  \"odontologo\": {\n    \"id\": 1,\n    \"numeroMatricula\": \"007\",\n    \"nombre\": \"LUKS\",\n    \"apellido\": \"DIAZ\"\n  }\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar Turno",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{URL}}/turnos/1",
+                            "path": [
+                                "turnos",
+                                "1"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Actualizar Turno",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "{{URL}}/turnos",
+                            "path": [
+                                "turnos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": 1,\n  \"fecha\": \"2023-03-30T20:30\",\n  \"paciente\": {\"id\": 1},\n  \"odontologo\": {\"id\": 1}\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar Turnos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/turnos/1",
+                            "path": [
+                                "turnos",
+                                "1"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Buscar todos los Turnos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/turnos",
+                            "path": [
+                                "turnos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{URL}}/turnos",
+                    "path": [
+                        "turnos"
+                    ],
+                    "host": [
+                        "{{url}}"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "admin",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "admin",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

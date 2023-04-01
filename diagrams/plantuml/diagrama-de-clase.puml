@@ -1,0 +1,23 @@
+@startuml
+allowmixing
+
+component Application {
+    package clinica #8c5bf5{
+
+        package persistence {
+            package repository
+            package entities
+        }
+        package service
+        package controller
+        package model
+
+        controller o-- service
+        service o-- repository
+        controller .> model
+        service .> model
+
+    }
+
+}
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+allowmixing
+
+component Application {
+    package clinica #8c5bf5 {
+
+        package service
+
+        package persistence {
+            package repository
+            package entities
+        }
+
+        package controller {
+            interface CRUDController {
+                + guardar(T t) : ResponseEntity<T>
+                + buscar(Integer id) : ResponseEntity<T>
+                + actualizar(T t) : ResponseEntity<T>
+                + eliminar(Integer id) : ResponseEntity<?>
+                + buscarTodos() : ResponseEntity<List<T>>
+            }
+            class PacienteController implements CRUDController
+            class OdontologoController  implements CRUDController
+            class TurnoController implements CRUDController
+        }
+
+        package model {
+            class OdontologoDTO
+            class PacienteDTO
+            class DomicilioDTO
+            class TurnoDTO
+        }
+
+        controller ..> model
+        service .> model
+        controller o-- service
+        service o--- persistence
+    }
+
+}
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+allowmixing
+
+component Application {
+    package com.valva.proyectointegrador #8c5bf5{
+
+        package persistence {
+            package repository
+            package entities
+        }
+
+        package service {
+
+            interface CRUDService {
+                + buscar(Integer id) : T
+                + gurdar(T t) : T
+                + actualizar(T t) : T
+                + buscarTodos() : List<T>
+                + eliminar(Integer id) : void
+            }
+
+            interface PacienteService extends CRUDService {
+            }
+            interface TurnoService extends CRUDService {
+            }
+            interface OdontologoService extends CRUDService {
+                + buscar(String nombre) : List<OdontologoDto>
+            }
+        }
+
+        package controller
+
+        controller o-- service
+        service o-- persistence
+    }
+
+}
+@enduml
