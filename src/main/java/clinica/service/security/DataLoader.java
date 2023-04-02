@@ -4,7 +4,6 @@ import clinica.entities.security.Rol;
 import clinica.entities.security.Usuario;
 import clinica.exceptions.BadRequestException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;

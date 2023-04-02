@@ -1,6 +1,5 @@
 package clinica.controller.impl;
 
-import clinica.entities.Turno;
 import clinica.exceptions.BadRequestException;
 import clinica.exceptions.GlobalExceptionsHandler;
 import clinica.exceptions.ResourceNotFoundException;

@@ -7,8 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.sql.SQLException;
-
 public interface CRUDController<T> {
   ResponseEntity<?> guardar(@RequestBody T t) throws BadRequestException, ResourceNotFoundException, JsonProcessingException;
   ResponseEntity<?> buscar(@PathVariable Integer id) throws BadRequestException, ResourceNotFoundException, JsonProcessingException;
