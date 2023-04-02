@@ -46,16 +46,6 @@ public class WebSecurityConfig {
   }
   
   @Bean
-  public SecurityFilterChain formLoginFilterChain(HttpSecurity http) throws Exception {
-    http
-        .authorizeHttpRequests(authorize -> authorize
-            .anyRequest().authenticated()
-        )
-        .formLogin(withDefaults());
-    return http.build();
-  }
-  
-  @Bean
   public UserDetailsService userDetailsService() {
     return username -> usuarioRepository.findByUsername(username)
         .map(u -> User.withUsername(u.getUsername())
@@ -80,8 +70,4 @@ public class WebSecurityConfig {
     return new BCryptPasswordEncoder();
   }
   
-  @Bean
-  public BCryptPasswordEncoder bCryptPasswordEncoder() {
-    return new BCryptPasswordEncoder();
-  }
 }
